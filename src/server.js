@@ -160,7 +160,7 @@ bot.on('message', async (msg) => {
                 const fillial = await a(findFillialID, find.fillial)
                 const vakansiya = await a(findVakansiyaID, find.vakansiya)
                 const malumot = `
-                    Telegram id: ${find.id},\nIsmi: ${find.ism},\nYoshi: ${find.age},\nNomeri: ${find.number},\nQayerda Yashashi: ${find.qayer},\nTalabami: ${find.talaba},\nIshlash Vaqti: ${find.vaqt},\nQayerda Ishlamoqchi: ${fillial[0]?.shahar},\nQaysi Yonalish: ${vakansiya[0]?.vakansiya}
+                    Telegram id: ${find.id},\nNomzodning ismi: ${find.ism},\nnNomzodning yoshi: ${find.age},\nnNomzodning nomeri: ${find.number},\nnNomzodning manzili: ${find.qayer},\nTalabami: ${find.talaba},\nIshlash Vaqti: ${find.vaqt},\nQayerda Ishlamoqchi: ${fillial[0]?.shahar},\nQaysi Yonalishda: ${vakansiya[0]?.vakansiya}
                 `
     
                 bot.sendMessage('6538161335', malumot)

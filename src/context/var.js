@@ -1,7 +1,7 @@
 export const savollar = {
     s0: "Passportdagi familiya, ism va sharifingizni kiriting:",
     s1: "Tug'ilgan sanangizni yozing \n(Misol, 19):",
-    s2: "Yashash manzilingiz (tuman, ko'cha/kvartal, uy,kvartira):",
+    s2: "Yashash manzilingiz (tuman, ko'cha/kvartal, uy/kvartira):",
     s3: "Telefon raqamingizni kiriting \n(Misol, +998901234567):",
     s4: "Talabamisiz:",
     s5: "Qaysi vaqtlar ishlay olasiz:",
@@ -13,7 +13,7 @@ export const savollar = {
     yonalish: "Yo'nalishni tanlang:",
     CV: "Avval ishlagan joylaringizni fayl shaklida Resume sifatida yuboring:",
     yoqVakansiya: "Hozircha Vakansiyalar yoq",
-    finish: "Malumot uchun rahmat! \nTez orada siz bilan bog'lanamiz"
+    finish: "Ma'lumot uchun rahmat! \nTez orada siz bilan bog'lanamiz"
 }
 
 export const admin = "6538161335"
@@ -27,9 +27,9 @@ export const adminText = {
     fillialAdd: "Fillial Qaysi shaharda",
     vakansiyaAdd: "Vakansiya Qaysi soha",
     qoshish: "Ma'lumot Bazaga qoshildi",
-    ochirish: "Malumot Bazadan ochirildi",
+    ochirish: "Ma'lumot Bazadan ochirildi",
     fTanla: "Fillialni tanlang:",
-    delFillial: "Ochiriluvchi Fillialni tanlang:",
+    delFillial: "O'chiriluvchi Fillialni tanlang:",
     delVk: "Kereli Vakansiyani Tanlang:",
     back: 'Come Back 🔙',
     home: "Asosiy Sahifa"
