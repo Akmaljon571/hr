@@ -30,11 +30,13 @@ export const adminText = {
     ochirish: "Malumot Bazadan ochirildi",
     fTanla: "Fillialni tanlang:",
     delFillial: "Ochiriluvchi Fillialni tanlang:",
-    delVk: "Kereli Vakansiyani Tanlang:"
+    delVk: "Kereli Vakansiyani Tanlang:",
+    back: 'Come Back 🔙',
+    home: "Asosiy Sahifa"
 }
 
 export const icon = {
-    vakansiya: "🤝",
+    vakansiya: "🌃",
     fillialDel: "🗑",
     findFillial: "🤛",
     delVakansiya: "❌"

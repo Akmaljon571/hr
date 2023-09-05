@@ -4,7 +4,8 @@ import { a } from "./utils/pg.js";
 import { age, allFillial, create, createFillial, createVakansiya, deleteFillial, deleteVakansiya, fillial, findClient, findFillial, findFillialID, findIdVakansiya, findVakansiyaID, ismi, nomer, qayer, talaba, vakansiya, vaqt } from "./sql/index.js";
 import { fKeyboard, findVakansiyaFn, ifFillial, vKeyboard, vakansiyaRender } from "./func/index.js";
 
-const token = '6463241240:AAG8WsVRzR25JmB9UVdpKXx1vuz4NLZwHrc'
+// const token = '6463241240:AAG8WsVRzR25JmB9UVdpKXx1vuz4NLZwHrc'
+const token = '6412587768:AAFLwCk1Xc69Qs_x2lIwnjWn8uR9jB_dLE8'
 
 const bot = new TelegramBot(token, { polling: true });
 let fillialVariable = ''
@@ -257,6 +258,17 @@ bot.on('message', async (msg) => {
             } else if (text.split(' ').reverse()[0] == icon.delVakansiya) {
                 await a(deleteVakansiya, text.split(' ').slice(0, -1).join(' '))
                 bot.sendMessage(chatId, adminText.ochirish, {
+                    reply_markup: {
+                        keyboard: [
+                            [adminText.keyboard1, adminText.keyboard2],
+                            [adminText.keyboard3, adminText.keyboard4]
+                        ],
+                        resize_keyboard: true
+                    }
+                });
+            } 
+            if (text == adminText.back) {
+                bot.sendMessage(chatId, adminText.home, {
                     reply_markup: {
                         keyboard: [
                             [adminText.keyboard1, adminText.keyboard2],

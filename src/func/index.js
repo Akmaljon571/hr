@@ -1,3 +1,4 @@
+import { adminText } from "../context/var.js"
 import { allFillial, findClient, findIdVakansiya, findVakansiya } from "../sql/index.js"
 import { a } from "../utils/pg.js"
 
@@ -7,6 +8,7 @@ export const fKeyboard = (arr, icon = "") => {
         a.push([`${arr[i]?.shahar} ${icon}`, arr[++i] ? `${arr[i]?.shahar} ${icon}` : ''].filter(e => e))
         i++
     }
+    a.push([adminText.back])
     return a
 }
 
