@@ -38,6 +38,6 @@ export const adminText = {
 export const icon = {
     vakansiya: "🌃",
     fillialDel: "🗑",
-    findFillial: "🤛",
+    findFillial: "👈",
     delVakansiya: "❌"
 }
