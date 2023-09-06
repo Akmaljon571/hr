@@ -4,7 +4,7 @@ dotenv.config();
 
 export const a = async (SQL, ...params) => {
     const client = new pg.Client({
-        connectionString: "postgres://postgres:mirxonjon@localhost/hr_bot",
+        connectionString: "postgres://postgres:akmal@localhost/hr_bot",
     });
     try {
         await client.connect();
