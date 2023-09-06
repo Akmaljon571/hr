@@ -16,7 +16,7 @@ export const savollar = {
     finish: "Ma'lumot uchun rahmat! \nTez orada siz bilan bog'lanamiz"
 }
 
-export const admin = "6538161335"
+export const admin = "6449688382"
 
 export const adminText = {
     hello: "Assalomu Aleykum Admin hush kelibsiz",
