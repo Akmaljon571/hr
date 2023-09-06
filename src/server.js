@@ -36,7 +36,6 @@ bot.on('message', async (msg) => {
     const { chat: { id: chatId }, text, reply_to_message } = msg
     try {
         if (chatId != admin) {
-            if (!msg?.document) {
                 if (text !== '/start' && reply_to_message?.text) {
                     const reply = reply_to_message.text
                     const allUser = await a(findClient, chatId)
@@ -98,6 +97,17 @@ bot.on('message', async (msg) => {
                                 selective: true
                             }
                         });
+                    } else if (reply == savollar.CV) {
+                        const client = await a(findClient, chatId)
+                        const find = client[0]
+                        const fillial = await a(findFillialID, find.fillial)
+                        const vakansiya = await a(findVakansiyaID, find.vakansiya)
+                        const malumot = `
+                        🇺🇿 Telegram id: ${find.id},\n\n👨‍💼 Ismi: ${find.ism},\n\n🕐 Yosh: ${find.age},\n\n📞 Aloqa: ${find.number},\n\n📍 Manzil: ${find.qayer},\n\n👨‍🎓 Talaba: ${find.talaba},\n\n⏰ Ishlash Vaqti: ${find.vaqt} smen,\n\n🌃 Hudud: ${fillial[0]?.shahar} filliali,\n\n🧍 Qaysi Yonalishda: ${vakansiya[0]?.vakansiya},\n\n🔎  Eski Ishxonasi: ${text}
+                        `
+            
+                        bot.sendMessage('6538161335', malumot)
+                        bot.sendMessage(chatId, savollar.finish)
                     }
                }
                // ismdan qayerdaligigacha
@@ -149,24 +159,12 @@ bot.on('message', async (msg) => {
                     await a(vakansiya, await findVakansiyaFn(chatId, text), chatId)
                     bot.sendMessage(chatId, savollar.CV, {
                         reply_markup: {
-                            remove_keyboard: true
+                            force_reply: true,
+                            selective: true
                         }
                     });
                 }
                 // Vakansiya save PDF create    
-            } else {
-                const client = await a(findClient, chatId)
-                const find = client[0]
-                const fillial = await a(findFillialID, find.fillial)
-                const vakansiya = await a(findVakansiyaID, find.vakansiya)
-                const malumot = `
-                    Telegram id: ${find.id},\nNomzodning ismi: ${find.ism},\nnNomzodning yoshi: ${find.age},\nnNomzodning nomeri: ${find.number},\nnNomzodning manzili: ${find.qayer},\nTalabami: ${find.talaba},\nIshlash Vaqti: ${find.vaqt},\nQayerda Ishlamoqchi: ${fillial[0]?.shahar},\nQaysi Yonalishda: ${vakansiya[0]?.vakansiya}
-                `
-    
-                bot.sendMessage('6538161335', malumot)
-                bot.sendDocument('6538161335', msg.document?.file_id)
-                bot.sendMessage(chatId, savollar.finish)
-            }
     
         } else {
             const reply = reply_to_message?.text

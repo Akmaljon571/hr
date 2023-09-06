@@ -11,7 +11,7 @@ export const savollar = {
     part: "1 smen 🌇",
     fil: "Filliallardan birini tanlang:",
     yonalish: "Yo'nalishni tanlang:",
-    CV: "Avval ishlagan joylaringizni fayl shaklida Resume sifatida yuboring:",
+    CV: "Avval Ishlagan joyingiz haqida qisqacha yozing yoki ishlamagan boʻlsangiz “ishlamaganman” tarzida yozing:",
     yoqVakansiya: "Hozircha Vakansiyalar yoq",
     finish: "Ma'lumot uchun rahmat! \nTez orada siz bilan bog'lanamiz"
 }
