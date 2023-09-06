@@ -106,7 +106,7 @@ bot.on('message', async (msg) => {
                         🇺🇿 Telegram id: ${find.id},\n\n👨‍💼 Ismi: ${find.ism},\n\n🕐 Yosh: ${find.age},\n\n📞 Aloqa: ${find.number},\n\n📍 Manzil: ${find.qayer},\n\n👨‍🎓 Talaba: ${find.talaba},\n\n⏰ Ishlash Vaqti: ${find.vaqt} smen,\n\n🌃 Hudud: ${fillial[0]?.shahar} filliali,\n\n🧍 Qaysi Yonalishda: ${vakansiya[0]?.vakansiya},\n\n🔎  Eski Ishxonasi: ${text}
                         `
             
-                        bot.sendMessage('6538161335', malumot)
+                        bot.sendMessage(admin, malumot)
                         bot.sendMessage(chatId, savollar.finish)
                     }
                }
