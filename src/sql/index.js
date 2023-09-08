@@ -46,4 +46,11 @@ export const deleteVakansiya = "DELETE from vakansiya where vakansiya = $1"
         fillial int,
         FOREIGN KEY (fillial) REFERENCES fillial(id) ON DELETE CASCADE
     );
+
+    INSERT INTO fillial(shahar) values('Toshkent Shahar');
+    
+    INSERT INTO vakansiya(vakansiya, fillial) values('Kassir', 1);
+    INSERT INTO vakansiya(vakansiya, fillial) values('Farrosh', 1);
+    INSERT INTO vakansiya(vakansiya, fillial) values('Hizmat Korsatuvchi', 1);
+    INSERT INTO vakansiya(vakansiya, fillial) values('Konditer', 1);
 */ 

@@ -13,7 +13,7 @@ export const savollar = {
     yonalish: "Yo'nalishni tanlang:",
     CV: "Avval Ishlagan joyingiz haqida qisqacha yozing yoki ishlamagan boʻlsangiz “ishlamaganman” tarzida yozing:",
     yoqVakansiya: "Hozircha Vakansiyalar yoq",
-    finish: "Ma'lumot uchun rahmat! \nTez orada siz bilan bog'lanamiz"
+    finish: "Ma'lumot uchun rahmat! \nTez orada siz bilan +998909514006 nomer orqali bog'lanamiz"
 }
 
 export const admin = "6449688382"
